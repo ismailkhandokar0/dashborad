@@ -1,0 +1,5 @@
+{
+    "db_username":"DB_ADMIN",
+    "db_password":"DB_PASSWORD",
+    "SECRET":"MY_SECRET"
+}

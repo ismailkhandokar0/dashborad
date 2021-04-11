@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+
+<div class=" row">
+    <div class="col-6 card card-body mx-auto">
+        <h1 class="text-capitalize font-italic font-weight-bolder text-center py-3">Please Registration Now!</h1>
+        <div class="my-4">
+            <div class="">
+                <form action="/play" class=" mx-auto" enctype="multipart/form-data" method="POST">
+                    <div class="form-group">
+                        <label for="" class="text-dark font-weight-bold ">Name</label>
+                        <input type="text" name="name" placeholder="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="file" name="fileISMAIL" placeholder="" class="form-control">
+                    </div>
+                    
+                    <input type="submit" value="Submit" class="btn btn-outline-primary btn-block">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<%- include('../partials/footer') %>

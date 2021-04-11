@@ -1,0 +1,113 @@
+<%- include('../../partials/head') %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" integrity="sha512-2eMmukTZtvwlfQoG8ztapwAH5fXaQBzaMqdljLopRSA0i6YKM8kBAOrSSykxu9NN9HrtD45lIqfONLII2AFL/Q==" crossorigin="anonymous" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card card-body">
+                        <h4 class="h1 text-center text-uppercase"><%= title %> </h4>
+                        <div class="profileImage">
+                            <img src="<%= user.profilePics %> " class="img-thumbnail img-fluid " alt="PictureProfile" id="profilePics">
+                        </div>
+                        <form action="/uploads/profilePics" class="my-2" id="profilePicsForm">
+                            <input type="file" name="profilePics" id="profilePicsFile" accept="image/*">
+                            <input 
+                            type="button"
+                            id="removeProfilePics"
+                            class="btn btn-danger"
+                            value="Remove ProfilePic"
+                            style="display: <%= user.profilePics.includes('default.jpg') ? 'none': 'block' %> "
+                            >
+                        </form>
+                        <div class="">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">Enter Your Name</label>
+                                    <input 
+                                    type="text" 
+                                    name="name" 
+                                    id="name"
+                                    class="form-control"
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Enter Your Name</label>
+                                    <input 
+                                    type="text" 
+                                    name="name"
+                                    class="form-control" 
+                                    id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Enter Your Name</label>
+                                    <input 
+                                    type="text" 
+                                    name="name" 
+                                    class="form-control"
+                                    id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Enter Your Name</label>
+                                    <input 
+                                    type="text" 
+                                    class="form-control"
+                                    name="name" 
+                                    id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Enter Your Name</label>
+                                    <input 
+                                    type="text" 
+                                    class="form-control"
+                                    name="name" 
+                                    id="name">
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="crop-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="my-modal-title">Resize Your Image</h5>
+                    <button class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="cropped-image"></div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" value="Cancel" id="cancel-cropping" class="btn btn-sm btn-dark">
+                    <input type="button" value="Update" id="upload-image" class="btn btn-danger">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<%- include('../../partials/footer')  %> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha512-Gs+PsXsGkmr+15rqObPJbenQ2wB3qYvTHuJO6YJzPe/dTLvhy0fmae2BcnaozxDo5iaF8emzmCZWbQ1XXiX2Ig==" crossorigin="anonymous"></script>
+<script src="/scripts/profileUpload.js">
+</script>

@@ -1,0 +1,41 @@
+
+<%- include('../../partials/head') %>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class=" row">
+    <div class="col-6 card card-body mx-auto">
+        <h1 class="text-capitalize font-italic font-weight-bolder text-center py-3">Please Registration Now!</h1>
+        <div class="my-4">
+            <div class="">
+                <form action="/auth/signup" class=" mx-auto" method = "POST">
+                    <div class="form-group">
+                        <label for="" class="text-dark font-weight-bold ">Username</label>
+                        <input type="text" name="username" placeholder="" class="form-control <%= error.username ?'is-invalid':'' %>" value="<%= value.username ? value.username:'' %>">
+                        <small class="invalid-feedback"><%= error.username %></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="text-dark font-weight-bold ">Email</label>
+                        <input type="email" name="email" placeholder="" class="form-control <%= error.email ?'is-invalid':'' %>" value="<%= value.username ? value.email:'' %>">
+                        <small class="invalid-feedback"><%= error.email %></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="text-dark font-weight-bold ">Password</label>
+                        <input type="password" name="password" placeholder="" class="form-control <%= error.password ?'is-invalid':'' %>" >
+                        <small class="invalid-feedback"><%= error.password %></small>
+                    </div><div class="form-group">
+                        <label for="" class="text-dark font-weight-bold ">Confirm Password</label>
+                        <input type="password" name="confirmPassword" placeholder="" class="form-control <%= error.confirmPassword ?'is-invalid':'' %>" >
+                        <small class="invalid-feedback"><%= error.confirmPassword %></small>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-outline-primary btn-block">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/footer') %>
